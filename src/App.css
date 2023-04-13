@@ -1,4 +1,6 @@
 .App {
+  max-width: 600px;
+  margin: auto;
   text-align: center;
 }
 
@@ -35,4 +37,31 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.p-card {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid greenyellow;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: greenyellow;
+  border: none;
+  color: black;
+  padding: 6px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.inp {
+  width: 100%;
+  padding: 5px 15px;
+  margin: 5px 0;
+  border: 1px solid greenyellow;
 }

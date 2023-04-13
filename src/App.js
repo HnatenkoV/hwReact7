@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import "./App.css";
+import AddRecordForm from "./components/addRecordsForm";
+import PhoneBookRecords from "./components/phoneBooksRec";
+import RecordsDataContextProvider from "./providers/recordsDataProvider";
+import LoginForm from "./components/loginForm";
+import AuthProvider from "./providers/authProvider";
+import LogOut from "./components/logOut";
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <AuthProvider>
+          <LoginForm/>
+          <RecordsDataContextProvider>
+              <LogOut/>
+             <div className="App">
+                Demo
+                <AddRecordForm />
+                 <PhoneBookRecords />
+             </div>
+          </RecordsDataContextProvider>
+      </AuthProvider>
   );
 }
 
